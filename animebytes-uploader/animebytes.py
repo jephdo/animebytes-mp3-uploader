@@ -69,7 +69,7 @@ def transcode_files(infohash: str) -> Path:
     return dst_path
 
 
-def create_torrent(infohash: str, dst_path: Path) -> Path:
+def create_torrent(dst_path: Path) -> Path:
     torrent = torf.Torrent(path=dst_path, trackers=[config.TRACKER_ANNOUNCE_URL])
     torrent.private = True
     torrent.source = config.AB_SOURCE

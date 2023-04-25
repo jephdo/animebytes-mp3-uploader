@@ -45,7 +45,7 @@ def download(torrent, transcode, max_retries=10, sleep_time_sec=2):
             count += 1
         dst_path = transcode_files(infohash)
         click.echo(f"Transcoded files to: {dst_path}")
-        outfile = create_torrent(infohash, dst_path)
+        outfile = create_torrent(dst_path)
         click.echo(f"Torrent file written to: {outfile}")
 
 
@@ -55,7 +55,7 @@ def transcode(infohash):
     dst_path = transcode_files(infohash)
     click.echo(f"Transcoded files to: {dst_path}")
 
-    outfile = create_torrent(infohash, dst_path)
+    outfile = create_torrent(dst_path)
     click.echo(f"Torrent file written to: {outfile}")
 
 
