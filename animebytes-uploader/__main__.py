@@ -62,4 +62,3 @@ def transcode(infohash):
 
 if __name__ == "__main__":
     cli()
-    cli()
