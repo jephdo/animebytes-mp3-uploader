@@ -1,9 +1,9 @@
+import os
 from io import BytesIO
 from pathlib import Path
 
 import requests
 import torf
-import os
 from qbittorrentapi import Client
 
 from .config import config

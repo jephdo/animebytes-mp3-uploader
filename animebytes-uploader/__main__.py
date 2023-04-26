@@ -1,12 +1,13 @@
-import click
 import re
 import time
 
+import click
+
 from .animebytes import (
+    check_completed,
+    create_torrent,
     download_torrent,
     transcode_files,
-    create_torrent,
-    check_completed,
 )
 
 
@@ -60,4 +61,5 @@ def transcode(infohash):
 
 
 if __name__ == "__main__":
+    cli()
     cli()
